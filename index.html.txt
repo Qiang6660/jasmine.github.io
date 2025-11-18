@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的作品集</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">我的作品集</a>
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link">首页</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">作品</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">关于我</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 首页横幅 -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>你好，我是 <span class="highlight">张小明</span></h1>
+      <p>前端开发工程师 & UI 设计师</p>
+      <a href="#projects" class="btn">查看作品</a>
+    </div>
+  </section>
+
+  <!-- 作品展示 -->
+  <section id="projects" class="projects">
+    <h2 class="section-title">我的作品</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250" alt="项目1" />
+        <h3>电商网站设计</h3>
+        <p>使用 React 和 Tailwind CSS 构建的响应式电商平台。</p>
+        <a href="#" class="btn btn-outline">查看详情</a>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250" alt="项目2" />
+        <h3>移动应用界面</h3>
+        <p>Figma 设计的健身类 App 界面，注重用户体验。</p>
+        <a href="#" class="btn btn-outline">查看详情</a>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x250" alt="项目3" />
+        <h3>个人博客系统</h3>
+        <p>基于 Node.js 和 MongoDB 的全栈博客平台。</p>
+        <a href="#" class="btn btn-outline">查看详情</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2 class="section-title">关于我</h2>
+      <p>我是一名热爱前端开发和界面设计的程序员，拥有 3 年以上的项目经验。擅长使用 HTML、CSS、JavaScript、React 等技术构建美观且高效的网页。我也热衷于学习新技术，持续提升自己的技能。</p>
+      <p>我相信简洁的设计与流畅的交互是优秀产品的核心。</p>
+      <div class="skills">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">Node.js</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系方式 -->
+  <section id="contact" class="contact">
+    <h2 class="section-title">联系我</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="你的名字" required />
+      <input type="email" placeholder="你的邮箱" required />
+      <textarea rows="5" placeholder="留言内容..." required></textarea>
+      <button type="submit" class="btn">发送消息</button>
+    </form>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p>&copy; 2025 张小明. 版权所有.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-weibo"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // 汉堡菜单切换
+    const menu = document.getElementById('mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menu.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // 点击导航项后关闭移动端菜单
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
